@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { NFTCard } from '../components/NFTCard';
 
 export default function Home() {
   return (
@@ -26,7 +27,9 @@ export default function Home() {
         </h2>
 
         <div className="flex flex-wrap items-start gap-7 mt-7 min-h-[50%]">
-
+          {nfts.map((nft) => (
+            <NFTCard nft={nft} key={nft.id} />
+          ))} 
         </div>
 
       </div>
@@ -34,3 +37,41 @@ export default function Home() {
     </div>
   )
 }
+
+const nfts = [
+  {
+      id: '1',
+      name: '#4373',
+      price: '0.3',
+      author: '0xE51B77159',
+      image: 'https://i.seadn.io/gae/kOxzFGpwUHKYI0TCTHtdo1fnh0hj3mqVTgAD55AZLIPWxTIkr2Xa0bgMMQY-mcC3REJ9C3bnqtt1GoM_FkhuCh7D6-o1WU-5TBB5?auto=format&w=384',
+      description: 'NFT do menino ney'
+
+  },
+  {
+      id: '2',
+      name: '#4373',
+      price: '0.3',
+      author: '0xE51B77159',
+      image: 'https://i.seadn.io/gae/HSq7RRwIfuAmn1GeYSoaPqG9DVw9R1Ai4A-e93giv4hCZM69kuEzm2Ll3qoEO41NELASpNcTdX2mVFqFuy9PKcxPr_Rk-Fc9_eTzqw?auto=format&w=384',
+      description: 'NFT do menino ney'
+
+  },
+  {
+      id: '3',
+      name: '#4373',
+      price: '0.3',
+      author: '0xE51B77159',
+      image: 'https://i.seadn.io/gae/A8cuZXyVNbfAb6PiQYRnfgbvZNJsKgTsJUZ-fNc47s9TNb4WdYd63jO8K9TMrjQ3ckuFTxthaMEXGa-bJG4QWdJfOuecE3mzUKms4w?auto=format&w=384',
+      description: 'NFT do menino ney'
+
+  },    {
+      id: '4',
+      name: '#4373',
+      price: '0.3',
+      author: '0xE51B77159',
+      image: 'https://i.seadn.io/gae/Wjn95aaLy7m6twuXc1ot0_mAm_N-s4pSNIXmBpkx-D68QwSZ-jET9kKiWEuInsigfBhlGJDJlhdE7mHzDREQHRebWUTtmp2bYueKF4Q?auto=format&w=384',
+      description: 'NFT do menino ney'
+
+  },
+]
